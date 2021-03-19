@@ -1,18 +1,18 @@
-import React from 'react';
-import './App.css';
-import CardsContainer from "./components/CardsContainer.js"
-import TopbarContainer from "./components/TopbarContainer.js"
-import SidebarContainer from "./components/SidebarContainer.js"
+import React from "react";
+import "./App.css";
+import CardsContainer from "./components/CardsContainer.js";
+import TopbarContainer from "./components/TopbarContainer.js";
+import SidebarContainer from "./components/SidebarContainer.js";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
-import './components/components.css';
+import "./components/components.css";
 
 function App() {
   return (
     <div className="cardWrapper">
       <Header />
-      <TopbarContainer />
-      <SidebarContainer />
+      {/* <TopbarContainer /> */}
+      {/* <SidebarContainer /> */}
       <CardsContainer />
       <Footer />
     </div>
@@ -33,7 +33,6 @@ export default App;
 //   }, []);
 //   return(<p>{JSON.stringify(news)}</p>)//stringify to show data or else it will receive an error message
 // }
-
 
 // //*****run data through app.js to make sure your getting a response****
 // import { getNews } from './news.js'

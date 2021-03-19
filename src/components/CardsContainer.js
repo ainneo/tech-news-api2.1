@@ -1,24 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { getNews2 } from '../news.js';
-import Cards from './Cards.js';
-import './components.css';
+import React, { useEffect, useState } from "react";
+import Cards from "./Cards.js";
+import "./components.css";
 
 function CardsContainer() {
-
   const [news1, setNews1] = useState([]);
+
   useEffect(() => {
-    getNews2().then(data => setNews1(data.slice(0,20)));
+    fetch("/.netlify/functions/token")
+      .then((response) => response.json())
+      .then((data) => {
+        setNews1(data.data.articles);
+      });
   }, []);
 
-  return(
+  return (
     <div className="right-side">
       <h2>Featured</h2>
-      {news1.map((lemons, index) => <Cards key={index} props={lemons} />)}
+      {news1.map((lemons, index) => (
+        <Cards key={index} props={lemons} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default CardsContainer
+export default CardsContainer;
 
 // Notes:
 //sidebar is CSS-GRID and sidebar-cards is Flexbox

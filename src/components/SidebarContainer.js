@@ -1,23 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { getNews } from '../news.js';
-import Sidebar from './Sidebar.js';
-import './components.css';
+import React, { useEffect, useState } from "react";
+import { getNews } from "../news.js";
+import Sidebar from "./Sidebar.js";
+import "./components.css";
 
 function SidebarContainer() {
   const [news, setNews] = useState([]);
   useEffect(() => {
-    getNews().then(data => setNews(data.slice(0,9)));
+    fetch("/.netlify/functions/token")
+      .then((response) => response.json())
+      .then((data) => {
+        setNews(data.data.articles);
+      });
   }, []);
 
-  return(
+  return (
     <div className="sidebar">
       <h2>The Latest</h2>
-      {news.map((lemons, index) => <Sidebar key={index} props={lemons} />)}
+      {news.map((lemons, index) => (
+        <Sidebar key={index} props={lemons} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default SidebarContainer
+export default SidebarContainer;
 //Notes:
 //Map news data with cards in this containter
 //lemons param can be named anything it is a default param

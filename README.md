@@ -1,5 +1,5 @@
 ## Description
-This is a simple responsive react.js tech news site.
+This is a simple responsive react.js site, featuring tech and AI news for geeks. The site makes API calls to G News, using Axios.
 
 ## Technologies Used
 * React.js

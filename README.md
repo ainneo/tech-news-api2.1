@@ -30,7 +30,7 @@ return(result);
 
 ### Step 4: Hide keys in Network Tabs by using a lambda function
 
-#### When testing: Local Development(see the netlify lambda repo for more info on local dev)
+## When testing: Local Development(see the netlify lambda repo for more info on local dev)
 #### prep steps for first time users
 ```
 npm i -g netlify-cli # Make sure you have the [Netlify CLI](https://github.com/netlify/cli) installed

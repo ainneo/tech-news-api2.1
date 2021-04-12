@@ -1,13 +1,15 @@
 ## Steps to hiding keys: (this example is using a fake key)
 
-- create .env file in root directory
-- add: REACT_APP_API_KEY=XXX in .env file
-- then add .env file name to gitignore file
-- .env will be ignored on file upload
+1. create .env file in root directory
+2. add: REACT_APP_API_KEY=XXX in .env file
+3. add .env file name to gitignore file
+4. .env will be ignored on file upload
 
 ### Step 1: hiding keys
 .env example in a env file:
+```
 REACT_APP_API_KEY=dx792355b86bax22c24eb7c9f2079dXX8942xxx
+```
 
 ### Step 2: using keys
 in news-api.js file:

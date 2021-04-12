@@ -5,11 +5,11 @@
 - then add .env file name to gitignore file
 - .env will be ignored on file upload
 
-* Step 1: hiding keys
+### Step 1: hiding keys
 .env example in a env file:
 REACT_APP_API_KEY=dx792355b86bax22c24eb7c9f2079dXX8942xxx
 
-* Step 2: using keys
+### Step 2: using keys
 in news-api.js file:
 ```
 const API_URL = `https://gnews.io/api/v3/search?q=bitcoin&token=${process.env.REACT_APP_API_KEY}`
@@ -24,6 +24,6 @@ return response.data.articles;
 return(result);
 }
 ```
-Step 3: Add keys to enviroment variables in Netlify
+### Step 3: Add keys to enviroment variables in Netlify
 
-Step 4: Hide keys in Network Tabs by using a lambda function
+### Step 4: Hide keys in Network Tabs by using a lambda function

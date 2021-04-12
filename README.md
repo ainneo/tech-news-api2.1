@@ -29,3 +29,14 @@ return(result);
 ### Step 3: Add keys to enviroment variables in Netlify
 
 ### Step 4: Hide keys in Network Tabs by using a lambda function
+
+### When testing:  (see the netlify lambda repo for more info on local dev)
+Local Development
+## prep steps for first time users
+npm i -g netlify-cli # Make sure you have the [Netlify CLI](https://github.com/netlify/cli) installed
+git clone https://github.com/netlify/create-react-app-lambda ## clone this repo
+cd create-react-app-lambda ## change into this repo
+yarn # install all dependencies
+
+## done every time you start up this project
+ntl dev ## nice shortcut for `netlify dev`, starts up create-react-app AND a local Node.js server for
